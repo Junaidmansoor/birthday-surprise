@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>My Heart</title>
+
+<style>
+
+body{
+background:#ffb6c1;
+text-align:center;
+font-family:Arial;
+overflow:hidden;
+padding-top:150px;
+}
+
+h1{
+font-size:50px;
+color:#c2185b;
+}
+
+p{
+font-size:22px;
+width:70%;
+margin:auto;
+}
+
+.heart{
+position:absolute;
+color:red;
+font-size:25px;
+animation: float 6s linear infinite;
+}
+
+@keyframes float{
+0%{transform:translateY(100vh)}
+100%{transform:translateY(-10vh)}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>My Heart ❤️</h1>
+
+<p>
+Happy Birthday Nashai ❤️  
+You are the most special person in my life.  
+Your smile brightens my world, and your love fills my heart with happiness.  
+Today is your day, and I hope it’s as beautiful as you are.  
+I love you forever.
+</p>
+
+<script>
+
+function createHeart(){
+
+let heart = document.createElement("div")
+
+heart.className="heart"
+heart.innerHTML="❤️"
+
+heart.style.left=Math.random()*100+"vw"
+
+heart.style.animationDuration=3+Math.random()*3+"s"
+
+document.body.appendChild(heart)
+
+setTimeout(()=>{
+heart.remove()
+},6000)
+
+}
+
+setInterval(createHeart,300)
+
+</script>
+
+</body>
+
+</html>
